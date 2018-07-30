@@ -971,13 +971,6 @@ function Show-AnyBox
 			$form.highStack.AddChild($fltrPanel)
 		}
 	}
-
-	# Add comment textblocks.
-	if (($txtMsg = New-TextBlock -text $($Comment -join [environment]::NewLine) -name 'txt_Explain')) {
-		$txtMsg.FontStyle = 'Italic'
-		$txtMsg.FontWeight = 'Normal'
-		$form.highStack.AddChild($txtMsg)
-	}
 	
 	if ($Timeout -and $Timeout -gt 0 -and $Countdown) {
 		# Create countdown textblock.
